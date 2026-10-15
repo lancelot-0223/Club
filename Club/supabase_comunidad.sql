@@ -1,5 +1,0 @@
--- CLUB DEL SPOILER — COMUNIDAD Y ASISTENCIA
--- Usa el archivo supabase_reparacion_segura.sql para crear o reparar las tablas
--- y funciones de miembros/asistencia. Este archivo se conserva como referencia
--- histórica y deliberadamente no ejecuta cambios para evitar sobrescribir la
--- seguridad ni el código presidencial de una instalación existente.
