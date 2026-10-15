@@ -1,0 +1,1 @@
+// La configuración de apariencia no requiere una cuenta.\n

@@ -1,0 +1,115 @@
+/* =========================================================
+   CASAS
+   ========================================================= */
+
+.house-ranking {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 35px;
+}
+
+.house-ranking-item {
+    display: grid;
+    grid-template-columns: 60px 55px 1fr auto;
+    align-items: center;
+    gap: 15px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+
+    padding: 15px 20px;
+    box-shadow: var(--shadow);
+}
+
+.house-position {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.house-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--accent-soft);
+    font-size: 1.5rem;
+}
+
+.house-points {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.houses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.house-card {
+    padding: 28px;
+    text-align: center;
+}
+
+.house-card-icon {
+    font-size: 4rem;
+    margin-bottom: 12px;
+}
+
+.house-card h2 {
+    color: var(--primary);
+}
+
+.house-card p {
+    color: var(--text-soft);
+}
+
+.house-members {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.house-member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.points-rules {
+    margin-top: 35px;
+}
+
+.point-rule {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.point-value {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+@media (max-width: 700px) {
+    .houses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .house-ranking-item {
+        grid-template-columns: 40px 45px 1fr auto;
+        padding: 12px;
+    }
+}

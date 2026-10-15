@@ -1,0 +1,64 @@
+/* =========================================================
+   ACTIVIDADES
+   ========================================================= */
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.activity-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.activity-date-box {
+    min-width: 72px;
+    text-align: center;
+
+    padding: 12px 8px;
+
+    background: var(--accent-soft);
+    border-radius: var(--radius-md);
+
+    color: var(--primary-dark);
+}
+
+.activity-day {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.activity-month {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.activity-info {
+    flex: 1;
+}
+
+.activity-info h2 {
+    font-size: 1.3rem;
+}
+
+.activity-info p {
+    color: var(--text-soft);
+}
+
+.activity-points {
+    margin-top: 12px;
+}
+
+.activity-rules {
+    margin-top: 40px;
+}
+
+@media (max-width: 700px) {
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+}
