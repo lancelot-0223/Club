@@ -1,0 +1,69 @@
+/* =========================================================
+   REUNIÓN
+   ========================================================= */
+
+.meeting-page {
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.meeting-hero {
+    text-align: center;
+    padding: 45px 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    color: #fff;
+    border-radius: var(--radius-lg);
+    margin-bottom: 25px;
+}
+
+.meeting-hero h1 {
+    color: #fff;
+}
+
+.meeting-hero p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.meeting-time-large {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.meeting-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.meeting-detail {
+    text-align: center;
+}
+
+.meeting-detail-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.meeting-detail strong {
+    display: block;
+    color: var(--primary);
+}
+
+.meeting-description {
+    color: var(--text-soft);
+}
+
+@media (max-width: 650px) {
+    .meeting-details {
+        grid-template-columns: 1fr;
+    }
+}

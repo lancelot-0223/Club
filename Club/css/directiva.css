@@ -1,0 +1,295 @@
+/* =========================================================
+   DIRECTIVA — SALÓN DEL CONSEJO
+   ========================================================= */
+
+.directiva-page {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(4,7,12,.78), rgba(4,7,12,.92)),
+        url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Hogwarts_Castle_(29464762188).jpg") center / cover fixed;
+    color: #0b53e4;
+}
+
+.directiva-page > header {
+    background: rgba(4,7,12,.72);
+    border-bottom-color: rgba(150,170,205,.18);
+}
+
+.directiva-page > header nav > a:first-child,
+.directiva-page > header nav a {
+    color: #f7e9e8;
+}
+
+.directiva-page main {
+    max-width: 1180px;
+}
+
+.directiva-hero {
+    position: relative;
+    min-height: 420px;
+    display: grid;
+    place-items: end start;
+    padding: clamp(28px, 6vw, 65px);
+    overflow: hidden;
+    border: 1px solid rgba(179,198,232,.2);
+    border-radius: 30px;
+    background:
+        linear-gradient(90deg, rgba(4,7,13,.94), rgba(4,7,13,.35)),
+        linear-gradient(0deg, rgba(4,7,13,.9), transparent 65%);
+    box-shadow: 0 30px 90px rgba(0,0,0,.48);
+}
+
+.directiva-hero::after {
+    content: "F.I.L.P.";
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    color: rgba(205,220,247,.35);
+    font-family: ui-monospace, monospace;
+    font-weight: 900;
+    letter-spacing: .3em;
+}
+
+.directiva-hero-content {
+    max-width: 760px;
+}
+
+.directiva-hero .eyebrow,
+.directiva-section-heading .eyebrow {
+    color: #9abaff;
+    font-family: ui-monospace, monospace;
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .18em;
+}
+
+.directiva-hero h1 {
+    margin: 10px 0;
+    font-size: clamp(2.8rem, 8vw, 5.8rem);
+    letter-spacing: -.06em;
+    text-shadow: 0 8px 35px rgba(0,0,0,.6);
+}
+
+.directiva-hero p {
+    max-width: 650px;
+    margin: 0;
+    color: #c2ccdb;
+    font-size: 1.08rem;
+}
+
+.directiva-intro-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 22px 0 42px;
+    padding: 25px;
+    border: 1px solid rgba(157,178,218,.2);
+    border-radius: 20px;
+    background: rgba(8,12,20,.82);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 20px 55px rgba(0,0,0,.3);
+}
+
+.directiva-intro-card h2 {
+    margin-bottom: 6px;
+}
+
+.directiva-intro-card p {
+    margin: 0;
+    color: #aeb9ca;
+}
+
+.seal {
+    flex: 0 0 55px;
+    display: grid;
+    place-items: center;
+    width: 55px;
+    height: 55px;
+    border: 1px solid #5e7db8;
+    border-radius: 50%;
+    color: #a9c5ff;
+    background: rgba(80,116,190,.12);
+    box-shadow: 0 0 30px rgba(95,137,220,.16);
+    font-size: 1.4rem;
+}
+
+.directiva-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.directiva-section-heading h2 {
+    margin-top: 5px;
+}
+
+.directiva-motto {
+    color: #8592a8;
+    font-family: ui-monospace, monospace;
+    font-size: .7rem;
+    letter-spacing: .13em;
+}
+
+.directiva-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.directiva-card {
+    position: relative;
+    min-height: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    overflow: hidden;
+    border: 1px solid rgba(160,180,220,.16);
+    border-radius: 20px;
+    background:
+        linear-gradient(155deg, rgba(13,18,29,.96), rgba(6,9,15,.91));
+    box-shadow: 0 20px 45px rgba(0,0,0,.28);
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.directiva-card::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -70px;
+    right: -55px;
+    border-radius: 50%;
+    background: var(--role-glow, rgba(116,150,255,.18));
+    filter: blur(3px);
+}
+
+.directiva-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(159,190,255,.4);
+    box-shadow: 0 25px 55px rgba(0,0,0,.4);
+}
+
+.role-symbol {
+    position: absolute;
+    top: 22px;
+    left: 24px;
+    color: var(--role-color, #a8c4ff);
+    font-size: 1.5rem;
+    text-shadow: 0 0 18px var(--role-glow, rgba(116,150,255,.25));
+}
+
+.directiva-position {
+    position: relative;
+    margin: 0 0 4px;
+    color: var(--role-color, #a8c4ff);
+    font-family: ui-monospace, monospace;
+    font-size: .72rem;
+    font-weight: 900;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.directiva-card h3 {
+    position: relative;
+    margin: 0 0 9px;
+    font-size: 1.55rem;
+    color: #f4f7fc;
+}
+
+.directiva-description {
+    position: relative;
+    margin: 0;
+    color: #9da9bb;
+    font-size: .9rem;
+}
+
+.role-president { --role-color: #c9a35c; --role-glow: rgba(201,163,92,.22); }
+.role-vice { --role-color: #91b3ff; --role-glow: rgba(145,179,255,.2); }
+.role-secretary { --role-color: #b89aff; --role-glow: rgba(184,154,255,.2); }
+.role-treasurer { --role-color: #58d9b2; --role-glow: rgba(88,217,178,.18); }
+.role-vocal { --role-color: #8f9eaf; --role-glow: rgba(143,158,175,.17); }
+
+.hogwarts-credit {
+    margin: 20px 0 0;
+    color: rgba(191,202,221,.55);
+    font-size: .72rem;
+    text-align: right;
+}
+
+@media (max-width: 850px) {
+    .directiva-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .directiva-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 560px) {
+    .directiva-page {
+        background-attachment: scroll;
+    }
+
+    .directiva-hero {
+        min-height: 360px;
+        padding: 25px;
+    }
+
+    .directiva-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .directiva-intro-card {
+        align-items: flex-start;
+    }
+
+    .hogwarts-credit {
+        text-align: left;
+    }
+}
+
+/* Corrección de contraste: Directiva oscura */
+.directiva-page {
+    background-color: #07090f;
+    color: #f2f5fb;
+    color-scheme: dark;
+}
+
+.directiva-page header,
+.directiva-page footer,
+.directiva-page section,
+.directiva-page article {
+    color: #f2f5fb;
+}
+
+.directiva-page input,
+.directiva-page select,
+.directiva-page textarea {
+    background-color: #111722;
+    color: #f2f5fb;
+    border: 1px solid #39465b;
+}
+
+.directiva-page input::placeholder,
+.directiva-page textarea::placeholder {
+    color: #9da9bb;
+}
+
+.directiva-page select option {
+    background-color: #111722;
+    color: #0955ec;
+}
+
+.directiva-page footer {
+    background: rgba(4, 7, 12, .94);
+    border-top: 1px solid rgba(150, 170, 205, .18);
+}
+
+.directiva-page a {
+    color: #a9c5ff;
+}

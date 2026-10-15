@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07090f">
+    <title>Comunidad | Club del Spoiler</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/comunidad.css">
+</head>
+<body class="community-page">
+
+<header>
+    <nav>
+        <a href="index.html">Club del Spoiler</a>
+        <div data-session-nav></div>
+    </nav>
+</header>
+
+<main>
+    <header class="community-hero">
+        <p>F.I.L.P. · REGISTRO DE COMUNIDAD</p>
+        <h1>La comunidad del Club</h1>
+        <p>Miembros, encuentros de los martes y asistencia. Todo en un solo lugar.</p>
+    </header>
+
+    <section class="community-overview">
+        <div class="community-stat">
+            <span class="stat-icon">♟</span>
+            <div><strong id="memberCount">0</strong><span>miembros activos</span></div>
+        </div>
+        <div class="community-stat">
+            <span class="stat-icon">📚</span>
+            <div><strong id="meetingCount">0</strong><span>martes registrados</span></div>
+        </div>
+        <div class="community-stat">
+            <span class="stat-icon">✦</span>
+            <div><strong id="attendanceCount">0</strong><span>asistencias marcadas</span></div>
+        </div>
+    </section>
+
+    <section class="president-access">
+        <div>
+            <span class="eyebrow">ACCESO RESERVADO</span>
+            <h2>Panel de presidencia</h2>
+            <p>Añade o retira miembros y registra la asistencia de cada martes.</p>
+        </div>
+        <button class="btn btn-primary" id="toggleAdminBtn" type="button">Abrir administración</button>
+    </section>
+
+    <section class="admin-panel" id="adminPanel" hidden>
+        <div class="admin-panel-head">
+            <div>
+                <span class="eyebrow">MODO PRESIDENCIA</span>
+                <h2>Administrar comunidad</h2>
+            </div>
+            <button class="btn btn-secondary btn-small" id="lockAdminBtn" type="button">Bloquear</button>
+        </div>
+
+        <div id="adminLogin">
+            <p>Introduce el código presidencial para habilitar la administración.</p>
+            <form id="presidentForm" class="inline-form">
+                <label>
+                    Código presidencial
+                    <div class="code-field">
+                        <input id="presidentCode" type="password" minlength="8" maxlength="128" autocomplete="off" required>
+                        <button id="toggleCode" type="button" aria-label="Mostrar código">👁</button>
+                    </div>
+                </label>
+                <button class="btn btn-primary" type="submit">Verificar</button>
+            </form>
+            <p id="adminMessage" class="auth-message" aria-live="polite"></p>
+        </div>
+
+        <div id="adminTools" hidden>
+            <div class="admin-tools-grid">
+                <form id="memberForm" class="admin-tool">
+                    <span class="eyebrow">NUEVO MIEMBRO</span>
+                    <h3>Agregar a la comunidad</h3>
+                    <label>
+                        Nombre
+                        <input id="memberName" type="text" maxlength="80" required placeholder="Nombre del miembro">
+                    </label>
+                    <label>
+                        Casa
+                        <select id="memberHouse">
+                            <option value="">Sin casa</option>
+                            <option value="Slytherin">🐍 Slytherin</option>
+                            <option value="Ravenclaw">🦅 Ravenclaw</option>
+                            <option value="Hufflepuff">🦡 Hufflepuff</option>
+                            <option value="Gryffindor">🦁 Gryffindor</option>
+                        </select>
+                    </label>
+                    <button class="btn btn-primary" type="submit">+ Añadir miembro</button>
+                    <p id="memberMessage" class="auth-message" aria-live="polite"></p>
+                </form>
+
+                <div class="admin-tool">
+                    <span class="eyebrow">MIEMBROS</span>
+                    <h3>Lista actual</h3>
+                    <p class="text-soft">Puedes retirar a cualquier miembro desde su tarjeta. Sus registros de asistencia también se eliminarán.</p>
+                    <div id="adminMemberList" class="admin-member-list"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="attendance-section">
+        <div class="section-heading">
+            <div>
+                <span class="eyebrow">MARTES DEL CLUB</span>
+                <h2>Asistencia por encuentro</h2>
+                <p>Selecciona el año y el martes para consultar o registrar un encuentro. La primera reunión del registro es el <strong>20 de octubre de 2026</strong>.</p>
+            </div>
+            <div class="legend">
+                <span><i class="dot present"></i> Presente</span>
+                <span><i class="dot absent"></i> Ausente</span>
+                <span><i class="dot excused"></i> Excusado</span>
+                <span><i class="dot pending"></i> Sin marcar</span>
+            </div>
+        </div>
+        <div class="meeting-filters" aria-label="Seleccionar encuentro">
+            <label for="meetingYearSelect">
+                Año
+                <select id="meetingYearSelect"></select>
+            </label>
+            <label for="meetingDateSelect">
+                Martes
+                <select id="meetingDateSelect"></select>
+            </label>
+        </div>
+        <div id="monthsContainer" class="months-container"></div>
+    </section>
+
+    <section class="community-note">
+        <span>✦</span>
+        <div>
+            <h2>Una página para quienes leen juntos</h2>
+            <p>El club crece reunión tras reunión. La asistencia queda organizada para que la historia de cada encuentro no se pierda.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Club del Spoiler · F.I.L.P.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/session.js"></script>
+<script src="js/comunidad.js"></script>
+</body>
+</html>

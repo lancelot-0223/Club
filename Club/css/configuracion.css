@@ -1,0 +1,85 @@
+/* =========================================================
+   CONFIGURACIÓN
+   ========================================================= */
+
+.settings-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.settings-section {
+    margin-bottom: 25px;
+}
+
+.settings-section:last-child {
+    margin-bottom: 0;
+}
+
+.settings-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+}
+
+.theme-options {
+    display: grid;
+    gap: 12px;
+}
+
+.theme-option {
+    position: relative;
+}
+
+.theme-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.theme-option label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.theme-option label:hover {
+    border-color: var(--primary);
+}
+
+.theme-option input:checked + label {
+    border-color: var(--primary);
+    background: var(--accent-soft);
+}
+
+.theme-preview {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.visual-theme-select {
+    margin-top: 10px;
+}
+
+.danger-zone {
+    border-color: color-mix(in srgb, var(--danger) 40%, var(--border));
+}
+
+.danger-zone h2 {
+    color: var(--danger);
+}
+
+@media (max-width: 750px) {
+    .settings-layout {
+        grid-template-columns: 1fr;
+    }
+}

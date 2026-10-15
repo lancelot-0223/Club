@@ -1,0 +1,1 @@
+const el=document.getElementById("meetingDescription");if(el)el.textContent="Nos reunimos todos los martes de 4:00 PM a 5:00 PM en el PONSCA. Aquí compartimos lecturas, debatimos y realizamos las actividades del club.";
