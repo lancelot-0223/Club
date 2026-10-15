@@ -15,9 +15,11 @@ El sitio público muestra las casas, los puntos y la comunidad. La presidencia p
 - Ejecuta únicamente `supabase_reparacion_segura.sql` para reparar la asistencia y los RPC sin borrar puntuaciones ni reemplazar el hash del código actual.
 - Si necesitas cambiar el código, usa `supabase_cambiar_codigo_presidente.sql` y reemplaza su marcador por tu nuevo código privado.
 - No ejecutes scripts antiguos que borren `president_config`; este proyecto ya no necesita borrar esa tabla para reparar el acceso.
-
 ## Funciones
 - Puntos de casas: añadir o quitar puntos, con validación del código en el servidor.
 - Comunidad: añadir y quitar miembros, y marcar Presente, Ausente o Excusado.
 - Asistencia: los filtros de año y martes muestran un encuentro a la vez para evitar una lista interminable.
 - El código presidencial se guarda como hash en Supabase; no está escrito en JavaScript ni se guarda en `sessionStorage`.
+
+### Tiempo
+- Esto me llevo mucho tiempo, we... por favor no lo dañen.
